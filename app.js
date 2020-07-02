@@ -11,6 +11,13 @@ const handlebars = require('express-handlebars')
 app.set('view engine', 'handlebars');
 app.engine('handlebars', handlebars.engine);
 
+// testing middleware
+app.use(function(req, res, next) {
+    res.locals.showTests = app.get('env') !== 'production' &&
+        req.query.test === '1';
+    next();
+});
+
 // set static file middleware
 app.use(express.static(__dirname + '/public'));
 
