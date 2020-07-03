@@ -32,9 +32,18 @@ app.get('/', function(req,res) {
     res.render('home');
 });
 
-
+// Page Routing
 app.get('/about', function(req, res) {
-    res.render('about', { quote: quote.getQuote()});
+    res.render('about', {
+        quote: quote.getQuote(),
+        pageTestScript: '/qa/tests-about.js'
+    });
+});
+
+app.get('/contact', function(req, res) {
+    res.render('contact', {
+        pageTestScript: '/qa/tests-global.js'
+    });
 });
 
 // 404 catch-all handler (middleware)
