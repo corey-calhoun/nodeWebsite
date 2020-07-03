@@ -17,7 +17,14 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-duration": "0.0.0",
+    "gulp-mocha": "^7.0.2",
     "mocha": "^8.0.1",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "zombie": "^6.1.4"
   }
 }

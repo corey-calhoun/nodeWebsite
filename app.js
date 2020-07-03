@@ -29,20 +29,34 @@ app.set('port', process.env.port || 3000);
 
 // set home page
 app.get('/', function(req,res) {
-    res.render('home');
+    res.render('home', {
+        pageTestScript: '/qa/tests-global.js'
+    });
 });
 
-// Page Routing
+// PAGE ROUTING SECTION
 app.get('/about', function(req, res) {
     res.render('about', {
         quote: quote.getQuote(),
-        pageTestScript: '/qa/tests-about.js'
+        pageTestScript: '/qa/tests-about.js' // Testing scripts
     });
 });
 
 app.get('/contact', function(req, res) {
     res.render('contact', {
-        pageTestScript: '/qa/tests-global.js'
+        pageTestScript: '/qa/tests-global.js' // Testing scripts
+    });
+});
+
+app.get('/tours/hood-river', function(req, res) {
+    res.render('tours/hood-river', {
+        pageTestScript: '/qa/tests-global.js' // Testing scripts
+    });
+});
+
+app.get('/tours/request-group-rate', function(req, res) {
+    res.render('tours/request-group-rate', {
+        pageTestScript: '/qa/tests-global.js' // Testing scripts
     });
 });
 
@@ -54,12 +68,12 @@ app.use(function(req,res) {
 
 // 500 catch-all handler (middleware)
 app.use(function(error, req, res, next) {
-    console.error(error.stack)
+    console.error(error.stack);
     res.status(500);
     res.render('500');
 });
 
 
 app.listen(app.get('port'), function() {
-    console.log(`Server running on http://localhost:` + app.get('port') + '; press CTRL-C to terminate...')
+    console.log(`Server running on http://localhost:` + app.get('port') + '; press CTRL-C to terminate...');
 });
