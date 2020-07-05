@@ -26,6 +26,7 @@
     "gulp-mocha": "^7.0.2",
     "mocha": "^8.0.1",
     "nodemon": "^2.0.4",
-    "zombie": "^6.1.4"
+    "zombie": "^6.1.4",
+    "lodash.template": ">=4.5.0"
   }
 }
