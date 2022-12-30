@@ -23,8 +23,8 @@
     "gulp-concat-css": "^3.1.0",
     "gulp-cssmin": "^0.2.0",
     "gulp-duration": "0.0.0",
-    "gulp-mocha": "^7.0.2",
-    "mocha": "^8.0.1",
+    "gulp-mocha": "^8.0.0",
+    "mocha": "^8.4.0",
     "nodemon": "^2.0.4",
     "zombie": "^6.1.4",
     "lodash.template": ">=4.5.0"
